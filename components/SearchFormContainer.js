@@ -3,7 +3,7 @@ import { SearchForm } from './SearchForm';
 import { PropTypes } from 'prop-types';
 import cred from './config';
 const API_KEY = cred.key;
-
+import gapi from 'https://apis.google.com/js/client.js'
 export class SearchFormContainer extends Component {
   constructor(props) {
     super(props);
@@ -25,13 +25,12 @@ export class SearchFormContainer extends Component {
     });
   }
   loadgapi() {
-    const script = document.createElement('script');
-    script.src = 'https://apis.google.com/js/client.js';
-    script.onload = () => {
-      let gapi = window.gapi;
+    // const script = document.createElement('script');
+    // script.src = 'https://apis.google.com/js/client.js';
+    // script.onload = () => {
+    //   let gapi = window.gapi;
       gapi.load('client', () => {
         gapi.client.setApiKey(API_KEY);
-
         this.setState({
           gapiReady: true,
           gapi: gapi
@@ -60,7 +59,6 @@ export class SearchFormContainer extends Component {
     });
   }
   handleSearch(e) {
-    e.preventDefault();
     this.searchByAddress(this.state.query, this.readRes);
   }
   componentDidMount() {
@@ -69,17 +67,8 @@ export class SearchFormContainer extends Component {
   render() {
     let error = this.context.store.getState().error;
     return (
-      <div className="search-form-container">
-        <div className="search-form-instruction">
-          <h2 className="search-form-heading">Find Your Representatives</h2>
-        </div>
-        <SearchForm
-          error={error}
-          query={this.state.query}
-          handleChange={this.handleChange}
-          handleSubmit={this.handleSearch}
-        />
-      </div>
+      <View>
+      </View>
     );
   }
 }

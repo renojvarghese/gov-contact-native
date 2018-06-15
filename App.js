@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
+import { SearchFormContainer } from './components/SearchFormContainer'
 export default class App extends React.Component {
   render() {
     return (
