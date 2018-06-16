@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import { SearchForm } from './SearchForm';
 import { PropTypes } from 'prop-types';
 import cred from './config';
 const API_KEY = cred.key;
-import gapi from 'https://apis.google.com/js/client.js'
+import gapi from 'https://apis.google.com/js/client.js';
 export class SearchFormContainer extends Component {
   constructor(props) {
     super(props);
@@ -68,6 +69,7 @@ export class SearchFormContainer extends Component {
     let error = this.context.store.getState().error;
     return (
       <View>
+          <SearchForm/>
       </View>
     );
   }
