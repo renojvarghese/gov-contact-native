@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { AppRegistry, TextInput, Button, View } from 'react-native';
 export class SearchForm extends Component {
   render() {
     return (
@@ -9,8 +9,10 @@ export class SearchForm extends Component {
              />
          <Button
            title="Search"
+           onPress={() => ''}
          />
        </View>
     );
   }
 }
+AppRegistry.registerComponent('SearchForm', () => AppRegistry);
