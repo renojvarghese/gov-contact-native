@@ -4,7 +4,7 @@ export class SearchForm extends Component {
   render() {
     return (
         <View >
-         <FormInput
+         <TextInput
              placeholder="Please enter your address"
              />
          <Button
