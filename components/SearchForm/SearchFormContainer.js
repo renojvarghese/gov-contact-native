@@ -4,7 +4,7 @@ import { SearchForm } from './SearchForm';
 // import { PropTypes } from 'prop-types';
 // import cred from './config';
 // const API_KEY = cred.key;
-import {gapi} from 'gapi';
+import {url} from './config';
 export class SearchFormContainer extends Component {
   // constructor(props) {
   //   super(props);
