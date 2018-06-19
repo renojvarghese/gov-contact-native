@@ -8,13 +8,9 @@ export class OfficialsContainer extends Component {
     }
 
     get officialData() {
-        return this.context.store
-            .getState()
-            .officials.map((official, index) => {
-                return (
-                    <Official key={"official_" + index} official={official} />
-                );
-            });
+        return this.props.officials.map((official, index) => {
+            return <Official key={"official_" + index} official={official} />;
+        });
     }
     render() {
         return <View>{this.officialData}</View>;
