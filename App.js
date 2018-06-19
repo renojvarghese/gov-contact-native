@@ -1,5 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View, AppRegistry } from "react-native";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import { reducer } from "./reducers/reducers";
 import { SearchFormContainer } from "./components/SearchForm/SearchFormContainer";
 import { OfficialsContainer } from "./components/OfficialsDisplay/OfficialsContainer";
 const officials = [
