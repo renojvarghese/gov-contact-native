@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, AppRegistry } from "react-native";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import { reducer } from "./reducers/reducers";
+import { officialReducer } from "./reducers/reducers";
 import { SearchFormContainer } from "./components/SearchForm/SearchFormContainer";
 import { OfficialsContainer } from "./components/OfficialsDisplay/OfficialsContainer";
 const officials = [
@@ -11,13 +11,18 @@ const officials = [
         officeName: "Former President"
     }
 ];
+
+const store = createStore(officialReducer);
+
 export default class App extends React.Component {
     render() {
         return (
-            <View style={styles.container}>
-                <SearchFormContainer />
-                <OfficialsContainer officials={officials} />
-            </View>
+            <Provider store={store}>
+                <View style={styles.container}>
+                    <SearchFormContainer />
+                    <OfficialsContainer officials={officials} />
+                </View>
+            </Provider>
         );
     }
 }
