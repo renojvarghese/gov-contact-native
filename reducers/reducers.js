@@ -2,13 +2,13 @@ export const officialReducer = (state = { error: false }, action) => {
     switch (action.type) {
         case "NEW_STATE":
             return {
-                officials: createOfficerArray(action.data),
+                officials: createOfficerArray(action.response),
                 error: false
             };
         case "ERROR":
             return {
                 officials: [],
-                error: true
+                error: action.error
             };
         default:
             return state;
