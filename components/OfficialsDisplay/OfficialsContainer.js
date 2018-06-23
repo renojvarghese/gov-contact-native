@@ -4,20 +4,7 @@ import { connect } from "react-redux";
 import { Official } from "./Official";
 
 import { StyleSheet, Text, View } from "react-native";
-// export class OfficialsContainer extends Component {
-//     constructor(props) {
-//         super(props);
-//     }
-//
-//     get officialData() {
-//         return this.props.officials.map((official, index) => {
-//             return <Official key={"official_" + index} official={official} />;
-//         });
-//     }
-//     render() {
-//         return <View>{this.officialData}</View>;
-//     }
-// }
+
 const displayOfficials = officials => {
     return officials.map((official, index) => {
         return <Official key={"official_" + index} official={official} />;
