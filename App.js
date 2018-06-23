@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, AppRegistry } from "react-native";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { officialReducer } from "./reducers/reducers";
-import { SearchFormContainer } from "./components/SearchForm/SearchFormContainer";
+import SearchForm from "./components/SearchForm/SearchForm";
 import { OfficialsContainer } from "./components/OfficialsDisplay/OfficialsContainer";
 const officials = [
     {
@@ -19,7 +19,7 @@ export default class App extends React.Component {
         return (
             <Provider store={store}>
                 <View style={styles.container}>
-                    <SearchFormContainer />
+                    <SearchForm />
                     <OfficialsContainer officials={officials} />
                 </View>
             </Provider>
