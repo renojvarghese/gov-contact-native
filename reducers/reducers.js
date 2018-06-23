@@ -1,4 +1,7 @@
-export const officialReducer = (state = { error: false }, action) => {
+export const officialReducer = (
+    state = { officials: [], error: false },
+    action
+) => {
     switch (action.type) {
         case "NEW_STATE":
             return {
