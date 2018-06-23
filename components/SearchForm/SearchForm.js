@@ -20,7 +20,7 @@ import { fetchOfficialData } from "./SearchFormActions";
 //     }
 // }
 const SearchForm = ({ dispatch }) => {
-    let input;
+    let input = "";
     return (
         <View>
             <TextInput
