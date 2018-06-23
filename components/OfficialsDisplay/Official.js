@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import { StyleSheet, Text, View, Image } from "react-native";
 export class Official extends Component {
     constructor(props) {
@@ -27,6 +28,7 @@ export class Official extends Component {
         );
     }
 }
-// Official.propTypes = {
-//   official: PropTypes.object.isRequired
-// };
+
+Official.propTypes = {
+    official: PropTypes.object.isRequired
+};
