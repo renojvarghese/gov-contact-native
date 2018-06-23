@@ -1,8 +1,10 @@
-export const fetchOfficialData = url => {
-    fetch(url)
+export const addOfficialData = response => ({
+    type: "NEW_STATE",
+    response: response
+});
+
+export const fetchOfficialData = (dispatch, url) => {
+    return fetch(url)
         .then(response => response.json())
-        .then(response => ({
-            type: "NEW_STATE",
-            response: response
-        }));
+        .then(response => dispatch(addOfficialData(response)));
 };

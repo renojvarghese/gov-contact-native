@@ -25,13 +25,19 @@ const SearchForm = ({ dispatch }) => {
         <View>
             <TextInput
                 placeholder="Please enter your address"
+                value={input}
                 onChangeText={text => {
                     input = text;
                 }}
             />
             <Button
                 title="Search"
-                onPress={() => dispatch(fetchOfficialData(url + input))}
+                onPress={() => {
+                    if (!input.trim()) {
+                        return;
+                    }
+                    fetchOfficialData(dispatch, url + input);
+                }}
             />
         </View>
     );
