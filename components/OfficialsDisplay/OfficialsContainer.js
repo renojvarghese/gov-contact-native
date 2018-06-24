@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Official } from "./Official";
 
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
 
 const displayOfficials = officials => {
     return officials.map((official, index) => {
@@ -17,9 +17,17 @@ const mapStateToProps = state => ({
 const OfficialsContainer = ({ officials, dispatch }) => {
     let input;
     return (
-        <View>
-            <Text>{displayOfficials(officials)}</Text>
-        </View>
+        <ScrollView
+            contentContainerStyle={{
+                flex: 1,
+                justifyContent: "space-between",
+                flexDirection: "column",
+                padding: 30,
+                height: 3000
+            }}
+        >
+            {displayOfficials(officials)}
+        </ScrollView>
     );
 };
 
