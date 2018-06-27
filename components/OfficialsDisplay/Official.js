@@ -17,7 +17,12 @@ export class Official extends Component {
     }
     render() {
         return (
-            <View>
+            <View
+                style={{
+                    height: 100,
+                    flex: 1
+                }}
+            >
                 <Image
                     style={{ height: 50, width: 50 }}
                     source={require("../../img/empty.png")}
