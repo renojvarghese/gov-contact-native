@@ -16,19 +16,7 @@ const mapStateToProps = state => ({
 
 const OfficialsContainer = ({ officials, dispatch }) => {
     let input;
-    return (
-        <ScrollView
-            contentContainerStyle={{
-                flex: 1,
-                justifyContent: "space-between",
-                flexDirection: "column",
-                padding: 30,
-                height: 3000
-            }}
-        >
-            {displayOfficials(officials)}
-        </ScrollView>
-    );
+    return <View style={{ marginTop: 20 }}>{displayOfficials(officials)}</View>;
 };
 
 export default connect(mapStateToProps)(OfficialsContainer);
