@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, AppRegistry } from "react-native";
+import { StyleSheet, Text, View, ScrollView, AppRegistry } from "react-native";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { officialReducer } from "./reducers/reducers";
@@ -18,10 +18,10 @@ export default class App extends React.Component {
     render() {
         return (
             <Provider store={store}>
-                <View style={styles.container}>
+                <ScrollView contentContainerStyle={styles.container}>
                     <SearchForm />
                     <OfficialsContainer officials={officials} />
-                </View>
+                </ScrollView>
             </Provider>
         );
     }
@@ -29,9 +29,10 @@ export default class App extends React.Component {
 // AppRegistry.registerComponent('SearchForm'. () => SearchForm);
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        paddingTop: 100,
         backgroundColor: "#fed03a",
-        alignItems: "center",
+        display: "flex",
+        flexDirection: "column",
         justifyContent: "center"
     },
     textStyle: {
