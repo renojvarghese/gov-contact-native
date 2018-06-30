@@ -4,6 +4,7 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { officialReducer } from "./reducers/reducers";
 import { SearchView } from "./views/SearchView";
+import { MainOfficialView } from "./views/MainOfficialView";
 
 const store = createStore(officialReducer);
 
@@ -12,7 +13,7 @@ export default class App extends React.Component {
         return (
             <Provider store={store}>
                 <ScrollView contentContainerStyle={styles.container}>
-                    <SearchView/>
+                    <MainOfficialView/>
                 </ScrollView>
             </Provider>
         );

@@ -1,5 +1,5 @@
 import React from "react";
-import { View,Text } from "react-native";
+import { View } from "react-native";
 import SearchForm from "../components/SearchForm/SearchForm";
 import OfficialsContainer from "../components/OfficialsDisplay/OfficialsContainer";
 
