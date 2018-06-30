@@ -21,8 +21,6 @@ const SearchForm = ({ dispatch }) => {
                 key: API_KEY,
                 language: "en"
             }}
-            currentLocation={true}
-            currentLocationLabel="Current location"
             debounce={200}
             styles={{
                 textInputContainer: {

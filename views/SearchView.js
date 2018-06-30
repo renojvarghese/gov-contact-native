@@ -1,4 +1,13 @@
-import SearchForm from "./components/SearchForm/SearchForm";
-import OfficialsContainer from "./components/OfficialsDisplay/OfficialsContainer";
+import React from "react";
+import { View,Text } from "react-native";
+import SearchForm from "../components/SearchForm/SearchForm";
+import OfficialsContainer from "../components/OfficialsDisplay/OfficialsContainer";
 
-const store = createStore(officialReducer);
+export const SearchView = () => {
+    return (
+        <View>
+            <SearchForm/>
+            <OfficialsContainer/>
+        </View>
+    )
+}

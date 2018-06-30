@@ -3,8 +3,7 @@ import { StyleSheet, Text, View, ScrollView, AppRegistry } from "react-native";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { officialReducer } from "./reducers/reducers";
-import SearchForm from "./components/SearchForm/SearchForm";
-import OfficialsContainer from "./components/OfficialsDisplay/OfficialsContainer";
+import { SearchView } from "./views/SearchView";
 
 const store = createStore(officialReducer);
 
@@ -13,8 +12,7 @@ export default class App extends React.Component {
         return (
             <Provider store={store}>
                 <ScrollView contentContainerStyle={styles.container}>
-                    <SearchForm />
-                    <OfficialsContainer officials={officials} />
+                    <SearchView/>
                 </ScrollView>
             </Provider>
         );
