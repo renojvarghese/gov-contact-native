@@ -5,12 +5,6 @@ import { Provider } from "react-redux";
 import { officialReducer } from "./reducers/reducers";
 import SearchForm from "./components/SearchForm/SearchForm";
 import OfficialsContainer from "./components/OfficialsDisplay/OfficialsContainer";
-const officials = [
-    {
-        name: "Obama",
-        officeName: "Former President"
-    }
-];
 
 const store = createStore(officialReducer);
 
