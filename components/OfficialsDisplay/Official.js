@@ -33,7 +33,19 @@ export class Official extends Component {
         );
     }
 }
-
+const mapStateToProps = state => {
+    return {
+        officials: state.officials
+    }
+}
+const mapDispatchToProps = dispatch => {
+    onClick: official => {
+        dispatch({
+            type: "MAIN",
+            official: official
+        })
+    }
+}
 Official.propTypes = {
     official: PropTypes.object.isRequired
 };
